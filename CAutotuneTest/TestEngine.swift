@@ -18,7 +18,8 @@ class TestEngine {
 
         try? AVAudioSession.sharedInstance().setCategory(.playback)
 
-        let audioUrl = Bundle.main.url(forResource: "demo1", withExtension: "m4a")!
+//        let audioUrl = Bundle.main.url(forResource: "demo1", withExtension: "m4a")!
+        let audioUrl = Bundle.main.url(forResource: "B0_30.87", withExtension: "mp3")!
 //        let audioUrl = Bundle.main.url(forResource: "1.C4_261.63hz", withExtension: "mp3")!
         let audioFile = try! AVAudioFile(forReading: audioUrl)
 
@@ -40,8 +41,8 @@ class TestEngine {
             
             
             // way 3
-//            let bin = FFTTap.FFTSetupForBinCount(binCount: .fourThousandAndNintySix)
-            let bin = FFTTap.FFTSetupForBinCount(binCount: .twoThousandAndFortyEight)
+            let bin = FFTTap.FFTSetupForBinCount(binCount: .fourThousandAndNintySix) // 4096
+//            let bin = FFTTap.FFTSetupForBinCount(binCount: .twoThousandAndFortyEight)  // 2048
             let fftData = FFTTap.performFFT(buffer: buffer, fftSetupForBinCount: bin)
             print("---------------------------")
 //            print(fftData)
@@ -51,10 +52,10 @@ class TestEngine {
             }
             print(newData)
             
-            let inversedFftData = FFTTap.inverseFFT(fftData: newData)
-            let newBuffer = Self.createPCMBuffer(inversedFftData)
+//            let inversedFftData = FFTTap.inverseFFT(fftData: newData)
+//            let newBuffer = Self.createPCMBuffer(inversedFftData)
             
-            try? outputFile.write(from: newBuffer)
+            try? outputFile.write(from: buffer)
         }
 
         audioEngine.prepare()
