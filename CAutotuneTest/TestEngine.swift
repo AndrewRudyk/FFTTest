@@ -40,13 +40,11 @@ class TestEngine {
 //            self.processAudioData(buffer: buffer)
             
             
-            // way 3
+            // way 3 - AudioKit
             let bin = FFTTap.FFTSetupForBinCount(binCount: .fourThousandAndNintySix) // 4096
 //            let bin = FFTTap.FFTSetupForBinCount(binCount: .twoThousandAndFortyEight)  // 2048
             let fftData = FFTTap.performFFT(buffer: buffer, fftSetupForBinCount: bin)
             print("---------------------------")
-//            print(fftData)
-//            let newData = fftData.filter{$0 >= 0.1}
             let newData = fftData.compactMap { number in
                 return number >= 0.1 ? number : 0
             }
@@ -54,7 +52,20 @@ class TestEngine {
             
 //            let inversedFftData = FFTTap.inverseFFT(fftData: newData)
 //            let newBuffer = Self.createPCMBuffer(inversedFftData)
+    
+            // way 4 - Tuna
+            // выдает самые мутные данные из всех предыдущих вариантов
             
+//            let fftDataBuffer = try! TunaFFT.fft(buffer: buffer)
+//            print("---------------------------")
+//            print(fftDataBuffer)
+//            let newData = fftData.compactMap { number in
+//                return number >= 0.1 ? number : 0
+//            }
+//            print(newData)
+            
+            
+            // -----------------------------------------------
             try? outputFile.write(from: buffer)
         }
 

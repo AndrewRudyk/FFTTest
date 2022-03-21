@@ -17,6 +17,7 @@
 		9913E9DF27E4CC5600D55C05 /* A0_27.50.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9913E9D827E4CC5600D55C05 /* A0_27.50.mp3 */; };
 		9913E9E027E4CC5600D55C05 /* C0_16.35.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9913E9D927E4CC5600D55C05 /* C0_16.35.mp3 */; };
 		9913E9E127E4CC5600D55C05 /* G0_24.50.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9913E9DA27E4CC5600D55C05 /* G0_24.50.mp3 */; };
+		995CD66727E86EAC0088CAC6 /* TunaFFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995CD66627E86EAC0088CAC6 /* TunaFFT.swift */; };
 		9977F5DD27C3997A008DB1BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5DC27C3997A008DB1BE /* AppDelegate.swift */; };
 		9977F5DF27C3997A008DB1BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5DE27C3997A008DB1BE /* SceneDelegate.swift */; };
 		9977F5E127C3997A008DB1BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5E027C3997A008DB1BE /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		9913E9D827E4CC5600D55C05 /* A0_27.50.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = A0_27.50.mp3; sourceTree = "<group>"; };
 		9913E9D927E4CC5600D55C05 /* C0_16.35.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = C0_16.35.mp3; sourceTree = "<group>"; };
 		9913E9DA27E4CC5600D55C05 /* G0_24.50.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = G0_24.50.mp3; sourceTree = "<group>"; };
+		995CD66627E86EAC0088CAC6 /* TunaFFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunaFFT.swift; sourceTree = "<group>"; };
 		9977F5D927C3997A008DB1BE /* CAutotuneTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAutotuneTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9977F5DC27C3997A008DB1BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9977F5DE27C3997A008DB1BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 			path = fromMetalArtical;
 			sourceTree = "<group>";
 		};
+		995CD66527E86E6B0088CAC6 /* Tuna */ = {
+			isa = PBXGroup;
+			children = (
+				995CD66627E86EAC0088CAC6 /* TunaFFT.swift */,
+			);
+			path = Tuna;
+			sourceTree = "<group>";
+		};
 		9977F5D027C3997A008DB1BE = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				9977F5F227C399CA008DB1BE /* TestEngine.swift */,
+				995CD66527E86E6B0088CAC6 /* Tuna */,
 				9913E9C527E473B700D55C05 /* fromMetalArtical */,
 				9977F5F627C3B331008DB1BE /* Cfiles */,
 				9913E9BE27E3667E00D55C05 /* AudioKit */,
@@ -229,6 +240,7 @@
 				99D3825427E1D8FE008CB936 /* SignalProcessing.swift in Sources */,
 				9977F5FD27C3B35F008DB1BE /* autotalent.c in Sources */,
 				9913E9C027E3669700D55C05 /* FFTTap.swift in Sources */,
+				995CD66727E86EAC0088CAC6 /* TunaFFT.swift in Sources */,
 				9977F5F327C399CA008DB1BE /* TestEngine.swift in Sources */,
 				9977F5DD27C3997A008DB1BE /* AppDelegate.swift in Sources */,
 				9977F5DF27C3997A008DB1BE /* SceneDelegate.swift in Sources */,
